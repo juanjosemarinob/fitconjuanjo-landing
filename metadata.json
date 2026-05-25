@@ -1,0 +1,6 @@
+{
+  "name": "fitconjuanjo",
+  "description": "Premium body engineering landing page and interactive tools for busy professionals seeking elite accountability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
