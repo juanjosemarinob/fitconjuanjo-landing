@@ -26,7 +26,6 @@ import {
 
 // Modular Components
 import Biocalculator from './components/Biocalculator';
-import AccountabilitySimulator from './components/AccountabilitySimulator';
 import RoadmapTimeline from './components/RoadmapTimeline';
 import ApplicationWizard from './components/ApplicationWizard';
 import FaqSection from './components/FaqSection';
