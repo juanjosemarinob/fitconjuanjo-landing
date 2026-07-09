@@ -21,16 +21,18 @@ import {
   PhoneCall,
   Camera,
   FileText,
-  X
+  X,
+  Compass,
+  Video
 } from 'lucide-react';
 
 // Modular Components
-import Biocalculator from './components/Biocalculator';
-import RoadmapTimeline from './components/RoadmapTimeline';
 import ApplicationWizard from './components/ApplicationWizard';
 import FaqSection from './components/FaqSection';
 
 import { ClientCase } from './types';
+// @ts-ignore
+import juanjoPhoto from './assets/images/mi_nueva_foto.jpg';
 
 export default function App() {
   const [lang, setLang] = useState<'es' | 'en'>('es');
@@ -130,27 +132,18 @@ export default function App() {
           </a>
 
           {/* Nav Links - Desktop */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-6 text-[10px] xl:text-xs text-neutral-400 font-mono uppercase tracking-wider flex-shrink">
-            <a href="#problema" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'El Problema' : 'The Pain'}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-8 text-[11px] xl:text-xs text-neutral-400 font-mono uppercase tracking-wider flex-shrink bg-neutral-900/40 px-6 py-2 rounded-full border border-neutral-800/40">
+            <a href="#avatares" className="hover:text-white transition-colors whitespace-nowrap">
+              {lang === 'es' ? '¿Para quién es?' : 'Who is this for?'}
+            </a>
+            <a href="#sistema" className="hover:text-white transition-colors whitespace-nowrap">
+              {lang === 'es' ? 'El Sistema' : 'The System'}
             </a>
             <a href="#historia" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'Mi Historia' : 'My Background'}
-            </a>
-            <a href="#calculator" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'Calculadora' : 'Calculator'}
-            </a>
-            <a href="#simulador" className="hover:text-white transition-colors font-bold text-brand whitespace-nowrap">
-              {lang === 'es' ? 'Regla 90%' : '90% Rule'}
-            </a>
-            <a href="#metodo" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'Los 4 Pilares' : 'The 4 Pillars'}
-            </a>
-            <a href="#roadmap" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'Tu Planificación' : 'Physio Timeline'}
+              {lang === 'es' ? 'Mi Historia' : 'My Story'}
             </a>
             <a href="#faq" className="hover:text-white transition-colors whitespace-nowrap">
-              {lang === 'es' ? 'Preguntas' : 'FAQs'}
+              {lang === 'es' ? 'Preguntas Frecuentes' : 'FAQs'}
             </a>
           </div>
 
@@ -202,7 +195,7 @@ export default function App() {
             <div className="inline-flex items-center gap-2.5 bg-neutral-900/50 border border-neutral-800 rounded-full px-3.5 py-1 text-xs text-neutral-400">
               <span className="flex h-1.5 w-1.5 rounded-full bg-brand" />
               <span className="font-mono tracking-widest uppercase text-[10px]">
-                {lang === 'es' ? 'PROGRAMA DE 12 SEMANAS PARA PROFESIONALES EXIGENTES' : '12-WEEK METHODOLOGY FOR HIGH-DEMAND INDIVIDUALS'}
+                {lang === 'es' ? 'COACHING 1-ON-1 PERSONALIZADO Y DE ALTO COMPROMISO' : 'HIGH-COMMITMENT CUSTOM 1-ON-1 COACHING'}
               </span>
             </div>
 
@@ -210,17 +203,17 @@ export default function App() {
               {lang === 'es' ? (
                 <>
                   DEJA DE <br />
-                  ENTRENAR A <br />
+                  ADIVINAR. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    CIEGAS.
+                    INVIERTE.
                   </span>
                 </>
               ) : (
                 <>
                   STOP <br />
-                  TRAINING IN <br />
+                  GUESSING. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    THE DARK.
+                    INVEST.
                   </span>
                 </>
               )}
@@ -229,11 +222,11 @@ export default function App() {
             <p className="text-md sm:text-lg text-neutral-300 max-w-xl font-normal leading-relaxed">
               {lang === 'es' ? (
                 <>
-                  Construye el físico y la energía que tu nivel de disciplina laboral merece. Un sistema híbrido de <strong className="text-white font-semibold">ingeniería corporal pura</strong> — fuerza calculada, rendimiento biomecánico y macros cuadradas al gramo.
+                  Construye un físico fuerte y saludable a través de un <strong className="text-white font-semibold">sistema diseñado a tu medida</strong>. Sin planes extremos ni sacrificios absurdos; solo disciplina inteligente, hábitos sólidos y un método sostenible que disfrutas de principio a fin.
                 </>
               ) : (
                 <>
-                  Build the elite physique and unshakeable health that your work ethic deserves. A hybrid system of <strong className="text-white font-semibold">pure physical engineering</strong> — structured loading curves, biomechanics, and macro parameters met to the gram.
+                  Build a strong, healthy body through a <strong className="text-white font-semibold">fully custom lifestyle system</strong>. No crash dieting or unrealistic metrics—just smart discipline, solid habits, and a sustainable roadmap you truly enjoy.
                 </>
               )}
             </p>
@@ -249,10 +242,10 @@ export default function App() {
                 {lang === 'es' ? 'Postular al Programa' : 'Apply for Intake'} <ChevronRight className="w-4 h-4" />
               </a>
               <a 
-                href="#calculator" 
+                href="#historia" 
                 className="px-8 py-4 bg-neutral-900 hover:bg-neutral-850 hover:border-neutral-700 text-neutral-300 font-display font-bold text-base tracking-widest uppercase rounded-sm border border-neutral-800 transition-all duration-200 flex items-center justify-center gap-2"
               >
-                {lang === 'es' ? 'Calcular Mis Macros Iniciales' : 'Calculate Initial Macros'}
+                {lang === 'es' ? 'Ver Mi Cambio Físico y Trayectoria' : 'View My Transformation & Journey'}
               </a>
             </div>
 
@@ -289,15 +282,15 @@ export default function App() {
               {/* background red pill glow */}
               <div className="absolute top-0 right-0 w-2 h-full bg-brand" />
               <div className="text-xs text-brand font-mono tracking-widest uppercase mb-1 font-bold">
-                {lang === 'es' ? 'ESTÁNDAR DE COMPROMISO' : 'EXPECTED COMPLIANCE RULE'}
+                {lang === 'es' ? 'CONSTRUYE DISCIPLINA REAL' : 'BUILD REAL DISCIPLINE'}
               </div>
-              <div className="font-display font-black text-3xl text-neutral-100 uppercase tracking-tight">
-                "NO DATA, NO CALL"
+              <div className="font-display font-black text-2xl text-neutral-100 uppercase tracking-tight">
+                {lang === 'es' ? 'HÁBITOS > INTENSIDAD' : 'HABITS > INTENSITY'}
               </div>
-              <p className="text-xs text-neutral-400 mt-1 leading-normal font-sans">
+              <p className="text-xs text-neutral-400 mt-1.5 leading-normal font-sans">
                 {lang === 'es' 
-                  ? 'Si dejas de ingresar tus mediciones de peso y progresos en la App, reprogramamos la asesoría semanal. Rigor mutuo.'
-                  : 'If you fail to record raw morning weight averages and gym lifts, our weekly video-check is locked.'}
+                  ? 'El éxito no viene de matarte una semana. Viene de crear hábitos diarios, comer saludable y disfrutar el camino de forma sostenible.'
+                  : 'Success is not about extreme short-term efforts. It is about locking down daily habits, eating healthy, and enjoying a sustainable path.'}
               </p>
             </div>
 
@@ -307,138 +300,231 @@ export default function App() {
 
       </header>
 
-      {/* SECTION: THE PAIN (EL ESTANCAMIENTO DEL PROFESIONAL) */}
-      <section id="problema" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0c0c] border-b border-neutral-900 relative">
-        <div className="max-w-4xl mx-auto space-y-8">
+      {/* SECTION: ¿PARA QUIÉN ES ESTO? (WHO IS THIS FOR?) */}
+      <section id="avatares" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0c0c] border-b border-neutral-900 relative">
+        <div className="max-w-7xl mx-auto space-y-16">
           
-          <div className="flex items-center gap-2">
-            <span className="h-[1px] w-6 bg-brand" />
-            <span className="text-xs font-mono tracking-widest text-[#e63232] uppercase font-bold">
-              {lang === 'es' ? 'EL DIAGNÓSTICO RETROSPECTIVO' : 'THE HISTORICAL ERROR'}
-            </span>
-          </div>
-
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-none">
-            {lang === 'es' ? (
-              <>
-                ¿LLEVAS AÑOS <br />
-                ENTRENANDO "A TU MANERA"<br />
-                <span className="text-neutral-500 font-normal">Y SIGUES EN EL MISMO SITIO?</span>
-              </>
-            ) : (
-              <>
-                SPENDING YEARS <br />
-                TRAINING "ON VIBES"<br />
-                <span className="text-neutral-500 font-normal">AND LOOKING THE SAME?</span>
-              </>
-            )}
-          </h2>
-
-          <div className="border-l-2 border-brand pl-6 my-8 space-y-4">
-            <p className="text-lg sm:text-xl text-neutral-300 font-light leading-relaxed italic font-sans text-left">
-              {lang === 'es' 
-                ? '"Vas al gimnasio con regularidad, intentas comer sano, compras suplementos recomendados, sacrificas comidas familiares... y, sin embargo, sigues luciendo exactamente igual ante el espejo. Tu problema no es la falta de voluntad. Es tu falta de un sistema exacto de datos."'
-                : '"You hit the weight room regularly, try to eat clean, buy dynamic supplements, and sacrifice family dinners... yet you look exactly the same. Your primary issue is not lack of drive or discipline. It is a absolute failure to manage metrics."'}
-            </p>
-          </div>
-
-          <p className="text-sm sm:text-base text-neutral-400 leading-relaxed max-w-3xl font-sans text-left">
-            {lang === 'es' ? (
-              <>
-                Un profesional de alto nivel mide sus ingresos, tasas de conversión y balance contable mensual con absoluta precisión. Pero cuando se trata de su cuerpo físico, entrena por instinto y come por estimaciones visuales. Tu fisiología responde a balances termodinámicos, biomecánicos y biológicos exactos. No requieres más sufrimiento inútil — necesitas aplicar lógica de ingeniería.
-              </>
-            ) : (
-              <>
-                Leading executive professionals track business revenues, acquisition margins, and balance sheets quarterly. Yet with their health, they lift on subjective feelings and eat on random guesses. Free-will is not the answer; the human metabolism works entirely on energy formulas and mechanical overload. Stop hoping; start measuring.
-              </>
-            )}
-          </p>
-
-          <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand/10 border border-brand/20 text-brand text-xs font-mono uppercase rounded-sm">
-            <ShieldCheck className="w-4 h-4 text-brand" /> 
-            {lang === 'es' 
-              ? 'No trabajamos con suposiciones. Dirigimos tu adaptación metabólica mediante tus propios números.' 
-              : 'Zero guesswork. We drive physical adaptations strictly through baseline figures.'}
-          </div>
-
-        </div>
-      </section>
-
-      {/* BIOCALCULATOR (BIOLOGICAL BUDGET WRAPPER) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative">
-        <div className="max-w-7xl mx-auto">
-          
-          <div className="text-center md:text-left mb-12 space-y-3">
+          <div className="text-center md:text-left space-y-4">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <span className="h-[1px] w-6 bg-brand" />
               <span className="text-xs font-mono tracking-widest text-brand uppercase font-bold">
-                {lang === 'es' ? 'PILARES BIOLÓGICOS' : 'BIOLOGICAL BASELINES'}
+                {lang === 'es' ? 'AUDITORÍA DE COMPROMISO' : 'AUDIENCE & INVESTMENT'}
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none">
-              {lang === 'es' ? 'MEDIDOR BIOMÉTRICO DE INICIO' : 'INITIAL PARAMETERS ESTIMATOR'}
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-none text-center md:text-left">
+              {lang === 'es' ? (
+                <>
+                  ¿PARA QUIÉN ES <br />
+                  <span className="text-neutral-500 font-normal">ESTA INVERSIÓN FÍSICA?</span>
+                </>
+              ) : (
+                <>
+                  WHO IS THIS <br />
+                  <span className="text-neutral-500 font-normal">PHYSICAL INVESTMENT FOR?</span>
+                </>
+              )}
             </h2>
-            <p className="text-xs text-neutral-400 max-w-lg leading-relaxed font-sans">
+            <p className="text-sm sm:text-base text-neutral-400 max-w-2xl font-sans text-center md:text-left leading-relaxed">
               {lang === 'es' 
-                ? 'Calcula tus macronutrientes de base según tu peso real de entrenamiento. Utiliza el medidor de adherencia para comprobar los riesgos de la inconsitencia.'
-                : 'Formulate your estimated starting caloric budget. Slide our adherence tracker to observe how deviations block progress.'}
+                ? 'No diseñamos planes para todo el mundo. Este espacio es para personas altamente comprometidas, dispuestas a invertir recursos, tiempo y enfoque en reprogramar su cuerpo bajo un sistema realista, sustentable y sin adivinanzas.'
+                : 'We do not build templates for the masses. This program is a mutual commitment designed for individuals ready to allocate capital, time, and focus to reconstruct their health parameters through a realistic, worry-free system.'}
             </p>
           </div>
 
-          <Biocalculator lang={lang} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            {/* AVATAR 1: EL AFICIONADO CONSTANTE */}
+            <div className="bg-[#111111]/40 border border-neutral-900/90 rounded-2xl p-8 flex flex-col justify-between hover:border-brand/20 hover:bg-[#111111]/80 transition-all duration-300 relative group">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="space-y-6 text-left">
+                <div className="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand">
+                  <TrendingUp className="w-6 h-6" />
+                </div>
+                <div className="space-y-2">
+                  <span className="font-mono text-xs text-brand uppercase tracking-widest font-extrabold block">
+                    {lang === 'es' ? 'AVATAR 01 · GIMNASIO CONSTANTE' : 'AVATAR 01 · CONSISTENT TRAINER'}
+                  </span>
+                  <h3 className="font-display font-black text-2xl text-white uppercase tracking-tight">
+                    {lang === 'es' ? 'Entrenas duro, pero te falta la fórmula exacta' : 'You lift heavy, but lack the precise formula'}
+                  </h3>
+                  <p className="text-sm text-neutral-300 font-sans font-light leading-relaxed">
+                    {lang === 'es'
+                      ? 'Vas al gimnasio varias veces por semana, comes sano a ojo, compras suplementos recomendados... pero al mirarte al espejo ves poco o ningún avance real. Te falta cuadrar la nutrición con rigor matemático y programar tus cargas de forma inteligente para forzar la adaptación de tus fibras.'
+                      : 'You hit the weights weekly, eyeball your active diet, and take the usual supplements—yet you feel visually unchanged. What you lack is not will; it is exact macronutrient calibration and a programmatic loading sequence to force real fiber growth.'}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-neutral-900 flex justify-between items-center">
+                <span className="text-[10px] font-mono uppercase text-neutral-500 tracking-wider">
+                  {lang === 'es' ? 'SOLUCIÓN: HOJA DE RUTA CIENTÍFICA' : 'CURE: SCIENTIFIC TIMELINE'}
+                </span>
+                <span className="w-2 h-2 rounded-full bg-brand" />
+              </div>
+            </div>
+
+            {/* AVATAR 2: EL PRINCIPIANTE DECIDIDO */}
+            <div className="bg-[#111111]/40 border border-neutral-900/90 rounded-2xl p-8 flex flex-col justify-between hover:border-red-500/20 hover:bg-[#111111]/80 transition-all duration-300 relative group">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="space-y-6 text-left">
+                <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500">
+                  <Compass className="w-6 h-6" />
+                </div>
+                <div className="space-y-2">
+                  <span className="font-mono text-xs text-brand uppercase tracking-widest font-extrabold block">
+                    {lang === 'es' ? 'AVATAR 02 · PRINCIPIANTE DECIDIDO' : 'AVATAR 02 · READY BEGINNER'}
+                  </span>
+                  <h3 className="font-display font-black text-2xl text-white uppercase tracking-tight">
+                    {lang === 'es' ? 'Quieres arrancar, de forma realista y para siempre' : 'First-time starter, aiming for real longevity'}
+                  </h3>
+                  <p className="text-sm text-neutral-300 font-sans font-light leading-relaxed">
+                    {lang === 'es'
+                      ? 'Reconoces que necesitas priorizar tu salud física, mental y estética, pero huyes de los gurús extremos que te exigen comer arroz y pollo hervido. Quieres crear hábitos consistentes, entender tu propio metabolismo y lograr disciplina desde cero mediante un sistema disfrutable y guiado de cerca.'
+                      : 'You understand that your health demands priority, but you deny standard fit-influencer plans demanding raw restrictions and zero taste. You want to construct deep long-term discipline from absolute scratch with a supportive, highly realistic method.'}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-neutral-900 flex justify-between items-center">
+                <span className="text-[10px] font-mono uppercase text-neutral-500 tracking-wider">
+                  {lang === 'es' ? 'SOLUCIÓN: PROTOCOLO DE HÁBITOS' : 'CURE: COMPOSURE SYSTEMS'}
+                </span>
+                <span className="w-2 h-2 rounded-full bg-red-500" />
+              </div>
+            </div>
+
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 bg-[#111111]/30 border border-neutral-900 rounded-xl p-6 max-w-4xl mx-auto">
+            <ShieldCheck className="w-5 h-5 text-brand shrink-0" />
+            <p className="text-xs text-neutral-400 font-sans tracking-wide leading-relaxed text-center sm:text-left">
+              {lang === 'es' 
+                ? 'Ambos perfiles tienen algo en común: comprenden que su cuerpo es su activo físico más importante y están decididos a invertir en una asesoría de alto nivel para dejar de perder tiempo.'
+                : 'Both vectors resolve to the same point: they acknowledge the physical body is their most valuable container, choosing to invest in elite mentorship instead of losing years to guesswork.'}
+            </p>
+          </div>
 
         </div>
       </section>
 
-      {/* ACCOUNTABILITY SECTION (THE "NO DATA, NO CALL" GUARANTEE ACCESIBILTY) */}
-      <section id="simulador" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f] border-t border-b border-neutral-900/85 relative">
-        <div className="max-w-7xl mx-auto">
+      {/* SECTION: EL SISTEMA / QUÉ INCLUYE (WHAT'S INCLUDED) */}
+      <section id="sistema" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] border-b border-neutral-900/80 relative">
+        <div className="absolute inset-0 subtle-grid opacity-10 pointer-events-none" />
+        <div className="max-w-7xl mx-auto space-y-16 relative z-10">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12">
-            <div className="lg:col-span-7 space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="h-[1px] w-6 bg-brand" />
-                <span className="text-xs font-mono tracking-widest text-brand uppercase font-bold">
-                  {lang === 'es' ? 'REGLAS RIGUROSAS, RESULTADOS DE INGENIERÍA' : 'STRICT LAWS, CALCULATED GAINS'}
-                </span>
-              </div>
-              <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none">
-                {lang === 'es' ? 'EL COMPROMISO DE SEGUIMIENTO' : 'OUR SYSTEM OF HIGH METRIC ACCOUNTABILITY'}
-              </h2>
-              <p className="text-sm text-neutral-300 leading-relaxed font-sans text-left">
-                {lang === 'es' ? (
-                  <>
-                    Este programa no ofrece PDFs genéricos automatizados. Estructuramos una asesoría premium, de altísimo contacto personal y exigencia que funciona únicamente si tú cumples las bases de medición diarias. No queremos tu dinero para que termines en la misma condición de partida. Queremos tu éxito físico absoluto.
-                  </>
-                ) : (
-                  <>
-                    This coaching framework avoids generic automated PDFs or hands-off bots. We structure an elite, high-touch personal program that works solely if you supply clean daily metrics. We are completely committed to your body transformation, which is why we hold your records to the highest standard.
-                  </>
-                )}
-              </p>
+          <div className="text-center space-y-4">
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-[1px] w-6 bg-brand" />
+              <span className="text-xs font-mono tracking-widest text-[#e63232] uppercase font-bold">
+                {lang === 'es' ? 'HOJA DE RUTA Y ENTREGABLES' : 'CORE DELIVERABLES'}
+              </span>
+              <span className="h-[1px] w-6 bg-brand" />
             </div>
-            <div className="lg:col-span-5 bg-[#141414] border border-neutral-800 p-5 rounded-lg flex items-center gap-4">
-              <Lock className="w-10 h-10 text-brand flex-shrink-0" />
-              <div>
-                <span className="block font-display text-white font-bold text-lg uppercase tracking-wide">
-                  {lang === 'es' ? 'PROMESA DE ADHERENCIA' : 'COMPLIANCE ASSURANCE'}
-                </span>
-                <p className="text-xs text-neutral-400 mt-1 leading-normal font-sans text-left">
-                  {lang === 'es' 
-                    ? 'Si aplicas una adherencia de más del 95% promedio en tu hoja de datos personal durante el primer mes y no experimentas un cambio visual objetivo, te devolvemos tu inversión. Garantía absoluta.'
-                    : 'If you complete a 95% average compliance on your tracking fields during the first month and do not see visual physical progress, we complete a full refund.'}
-                </p>
-              </div>
-            </div>
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-none">
+              {lang === 'es' ? (
+                <>
+                  EL SISTEMA DE ENFOQUE <br />
+                  <span className="text-neutral-500 font-normal">SANO, SEGURO Y SOSTENIBLE</span>
+                </>
+              ) : (
+                <>
+                  THE 3 CORE PIECES <br />
+                  <span className="text-neutral-500 font-normal">FOR SUSTAINED MIND & BODY GROWTH</span>
+                </>
+              )}
+            </h2>
+            <p className="text-sm sm:text-base text-neutral-400 max-w-xl mx-auto font-sans leading-relaxed">
+              {lang === 'es'
+                ? 'Olvídate de la adivinanza y de las dietas restrictivas que arruinan tu vida social. Nuestro método de acompañamiento premium se compone de tres pilares diseñados para tu vida:'
+                : 'Say goodbye to extreme calorie limits and over-training splits. We deliver functional, habit-centric systems built to integrate cleanly into your real social and personal calendar:'}
+            </p>
           </div>
 
-          <AccountabilitySimulator lang={lang} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* CARACTERÍSTICA 1: ENTRENAMIENTO PERSONALIZADO */}
+            <div className="bg-[#0c0c0c] border border-neutral-850 p-8 rounded-2xl flex flex-col justify-between hover:border-brand/35 hover:bg-neutral-900/50 transition-all duration-300 group">
+              <div className="space-y-6">
+                <div className="w-14 h-14 bg-brand/10 border border-brand/20 rounded-xl flex items-center justify-center text-brand">
+                  <Dumbbell className="w-7 h-7" />
+                </div>
+                <div className="space-y-3">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-500 uppercase font-bold block">
+                    {lang === 'es' ? 'ENTREGABLE 01 · ENTRENAMIENTO' : 'DELIVERABLE 01 · EXERCISE'}
+                  </span>
+                  <h3 className="font-display font-bold text-2xl text-white uppercase tracking-tight">
+                    {lang === 'es' ? 'Rutinas de Fuerza Inteligentes' : 'Custom Exercise Programming'}
+                  </h3>
+                  <p className="text-sm text-neutral-400 font-sans leading-relaxed">
+                    {lang === 'es'
+                      ? 'Rutinas adaptadas por completo a tu nivel y metas específicas, optimizando cada sesión para activar las fibras adecuadas. Aprenderás a dominar la sobrecarga progresiva y el estímulo mecánico de forma autónoma desde cualquier gimnasio.'
+                      : 'Highly personalized workout splits tailored to your specific biomechanics and muscle needs. Learn how to leverage exact mechanical load to build dense power and lean mass independently.'}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-4 border-t border-neutral-900 flex justify-between items-center text-xs font-mono text-neutral-500">
+                <span>{lang === 'es' ? 'OPTIMIZADO 1-ON-1' : '100% PERSONALIZED'}</span>
+                <span className="text-brand">01</span>
+              </div>
+            </div>
+
+            {/* CARACTERÍSTICA 2: ALIMENTACIÓN SOSTENIBLE */}
+            <div className="bg-[#0c0c0c] border border-neutral-850 p-8 rounded-2xl flex flex-col justify-between hover:border-brand/35 hover:bg-neutral-900/50 transition-all duration-300 group">
+              <div className="space-y-6">
+                <div className="w-14 h-14 bg-brand/10 border border-brand/20 rounded-xl flex items-center justify-center text-brand">
+                  <Utensils className="w-7 h-7" />
+                </div>
+                <div className="space-y-3">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-500 uppercase font-bold block">
+                    {lang === 'es' ? 'ENTREGABLE 02 · NUTRICIÓN' : 'DELIVERABLE 02 · DIET'}
+                  </span>
+                  <h3 className="font-display font-bold text-2xl text-white uppercase tracking-tight">
+                    {lang === 'es' ? 'Nutrición Rica y Sostenible' : 'Sustainable Lifestyle Nutrition'}
+                  </h3>
+                  <p className="text-sm text-neutral-400 font-sans leading-relaxed">
+                    {lang === 'es'
+                      ? 'Planes de alimentación deliciosos que se adecúan a tu estilo de vida y entrenamientos diarios. Aprenderás a equilibrar tus proteínas y calorías sin torturas extremas, haciendo que el proceso sea disfrutable a largo plazo.'
+                      : 'Delightful, simple macro-friendly setups designed around your real dining preferences and calendar. We eliminate nonsense food bans, showing you how to balance energy without stress.'}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-4 border-t border-neutral-900 flex justify-between items-center text-xs font-mono text-neutral-500">
+                <span>{lang === 'es' ? 'SIN RESTRICCIONES ABSURDAS' : 'NO CRAZY BANS'}</span>
+                <span className="text-brand">02</span>
+              </div>
+            </div>
+
+            {/* CARACTERÍSTICA 3: LLAMADAS 15 MIN */}
+            <div className="bg-[#0c0c0c] border border-neutral-850 p-8 rounded-2xl flex flex-col justify-between hover:border-brand/35 hover:bg-neutral-900/50 transition-all duration-300 group">
+              <div className="space-y-6">
+                <div className="w-14 h-14 bg-brand/10 border border-brand/20 rounded-xl flex items-center justify-center text-brand">
+                  <Video className="w-7 h-7" />
+                </div>
+                <div className="space-y-3">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-500 uppercase font-bold block">
+                    {lang === 'es' ? 'ENTREGABLE 03 · SEGUIMIENTO' : 'DELIVERABLE 03 · ACCOUNTABILITY'}
+                  </span>
+                  <h3 className="font-display font-bold text-2xl text-white uppercase tracking-tight">
+                    {lang === 'es' ? 'Llamada de Enfoque Semanal' : '15-Min Weekly Progress Calls'}
+                  </h3>
+                  <p className="text-sm text-neutral-400 font-sans leading-relaxed">
+                    {lang === 'es'
+                      ? 'Videollamadas semanales de 15 minutos directas con Juanjo para revisar avances, despejar dudas técnicas, ajustar parámetros y garantizar que tu constancia y hábitos se mantengan estables.'
+                      : 'Express 1-on-1 video calls with Juanjo to audit weekly progress, answer core biomechanic doubts, adjust calorie profiles, and secure your long-term mental consistency.'}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 pt-4 border-t border-neutral-900 flex justify-between items-center text-xs font-mono text-neutral-500">
+                <span>{lang === 'es' ? 'SOPORTE DIRECTO' : 'DIRECT ACCOUNTABILITY'}</span>
+                <span className="text-brand">03</span>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </section>
 
       {/* SECTION: MI HISTORIA Y CREDENCIALES (JUANJO BIO) */}
-      <section id="historia" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative">
+      <section id="historia" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative border-b border-neutral-900/80">
         <div className="max-w-7xl mx-auto">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -447,21 +533,40 @@ export default function App() {
             <div className="lg:col-span-5 relative">
               <div className="border border-neutral-800 p-2 rounded-xl bg-neutral-900/30 overflow-hidden text-center justify-center flex">
                 <img 
-                  src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800" 
+                  src={juanjoPhoto} 
                   alt="Juanjo - Atleta e Ingeniero Biométrico" 
-                  className="w-full aspect-[4/5] object-cover rounded-lg filter grayscale opacity-90 contrast-110 hover:grayscale-0 transition-all duration-300"
+                  className="w-full aspect-[3/4] object-cover rounded-lg transition-all duration-300 hover:scale-[1.01] shadow-2xl"
+                  referrerPolicy="no-referrer"
                 />
               </div>
-              {/* Floating micro credentials card */}
-              <div className="absolute -bottom-6 -right-4 bg-brand border border-red-500/35 p-4 rounded shadow-xl max-w-xs text-left">
-                <span className="text-[9px] font-mono tracking-widest text-[#ffc8c8] uppercase block font-bold">COACH EN LÍNEA (HOBBY / PASIÓN)</span>
-                <span className="font-display font-extrabold text-[#fff] uppercase text-base">Juan José Mariño (juanjo)</span>
-                <div className="h-[1px] bg-red-400/30 my-1.5" />
-                <span className="text-[10px] text-white/90 leading-tight block font-sans">
-                  {lang === 'es' 
-                    ? 'Atleta Amateur, Maratonista, entreno y ayudo a otros como mi pasión para verlos progresar.'
-                    : 'Amateur Athlete, Marathon Runner, coaching as a hobby because I love helping people progress.'}
+              
+              {/* Floating records container on left column */}
+              <div className="absolute -bottom-6 -right-4 bg-brand border border-red-500/35 p-5 rounded-lg shadow-xl max-w-xs text-left">
+                <span className="text-[9px] font-mono tracking-widest text-[#ffc8c8] uppercase block font-bold mb-1">
+                  {lang === 'es' ? 'COACH EN LÍNEA (HOBBY / PASIÓN)' : 'ONLINE PRIVATE COACHING'}
                 </span>
+                <span className="font-display font-black text-white uppercase text-base block mb-2">
+                  Juan José Mariño (juanjo)
+                </span>
+                <div className="h-[1px] bg-red-400/30 my-2" />
+                <ul className="space-y-1.5 text-xs text-white/95 leading-tight font-sans">
+                  <li className="flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-red-200 shrink-0" />
+                    <span>{lang === 'es' ? 'Atleta Amateur & Maratonista' : 'Amateur Athlete & Marathoner'}</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <Flame className="w-3.5 h-3.5 text-red-200 shrink-0" />
+                    <span>{lang === 'es' ? 'Récord 21K: 1h45m (Abr 2026)' : '21K PB: 1h45m (April 2026)'}</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <Dumbbell className="w-3.5 h-3.5 text-red-200 shrink-0" />
+                    <span>{lang === 'es' ? '8+ Años Fuerza / Gimnasio' : '8+ Years Fitness & Lifting'}</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <Scale className="w-3.5 h-3.5 text-red-200 shrink-0" />
+                    <span>{lang === 'es' ? '4 Años Natación Competitiva' : '4 Years Competitive Swimming'}</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -471,7 +576,7 @@ export default function App() {
               <div className="flex items-center gap-2">
                 <span className="h-[1px] w-6 bg-brand" />
                 <span className="text-xs font-mono tracking-widest text-brand uppercase font-bold">
-                  {lang === 'es' ? 'PROPÓSITO Y LOGREBLES' : 'COACH IDENTITY & INTEGRITY'}
+                  {lang === 'es' ? 'PROPÓSITO Y LOGROS' : 'COACH IDENTITY & INTEGRITY'}
                 </span>
               </div>
 
@@ -491,7 +596,7 @@ export default function App() {
                 )}
               </h2>
 
-              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-sans font-light text-left font-sans">
+              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-sans font-light text-left">
                 {lang === 'es' ? (
                   <>
                     He sido atleta toda mi vida: competí en fútbol, atletismo y voleibol escolar, y nadé competitivamente por 4 años. Llevo más de 8 años de entrenamiento de fuerza en el gimnasio, corriendo distancias y empujando mis límites. En 2024, tras un periodo de volumen (bulk), llegué a pesar 190 libras y logré reducirlas a 165 libras totalmente definido, manteniendo el músculo e imprimiendo disciplina real. Completé mi primer maratón completo en mayo de 2025 y obtuve mi mejor récord en media maratón de 1h45m el 12 de abril de 2026. Al igual que el <strong>Dr. Andrew Huberman</strong> y el <strong>Dr. Andy Galpin</strong>, creo en metodologías de entrenamiento y nutrición respaldadas al 100% por la ciencia biológica, sin trampas ni rodeos.
@@ -515,13 +620,13 @@ export default function App() {
                   </p>
                 </div>
                 <div className="p-4 bg-neutral-950 border border-neutral-850 rounded">
-                  <span className="block text-[10px] text-brand font-mono uppercase tracking-widest font-bold font-sans">
+                  <span className="block text-[10px] text-brand font-mono uppercase tracking-widest font-bold">
                     {lang === 'es' ? 'RENDIMIENTO HÍBRIDO' : 'HYBRID CAPACITY'}
                   </span>
                   <p className="text-xs text-neutral-400 mt-1 leading-normal font-sans">
                     {lang === 'es'
-                      ? 'Con una marca de Media Maratón de 1h45m y maratonista completo, enseño a profesionales ocupados a quemar grasa y resistir sin fatiga corporal crónica.'
-                      : 'Equipped with a 1h45m Half-Marathon record, I guide active runners to preserve power capacity and gain athletic muscle simultaneously.'}
+                      ? 'Con una marca de Media Maratón de 1h45m y maratonista completo, enseño a personas ocupadas y altamente comprometidas a quemar grasa y resistir sin fatiga corporal crónica.'
+                      : 'Equipped with a 1h45m Half-Marathon record, I guide active runners and dedicated, busy individuals to lose fat and build athletic muscle simultaneously without chronic fatigue.'}
                   </p>
                 </div>
               </div>
@@ -556,211 +661,6 @@ export default function App() {
 
             </div>
 
-          </div>
-
-        </div>
-      </section>
-
-      {/* THE 4 PILLARS (LOS 4 PILARES DEL MÉTODO) */}
-      <section id="metodo" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0c0c] border-t border-b border-neutral-900/80 relative">
-        <div className="max-w-7xl mx-auto font-sans">
-          
-          <div className="text-center md:text-left mb-16 space-y-3">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <span className="h-[1px] w-6 bg-brand" />
-              <span className="text-xs font-mono tracking-widest text-[#e63232] uppercase font-bold">
-                {lang === 'es' ? 'NUESTRO ARMAZÓN OPERATIVO' : 'OPERATIONAL PRINCIPLES'}
-              </span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none text-center md:text-left">
-              {lang === 'es' ? 'LOS 4 PILARES DE LA INGENIERÍA CORPORAL' : 'THE 4 PILLARS OF BODY RECONSTRUCTION'}
-            </h2>
-            <p className="text-xs text-neutral-400 max-w-lg leading-relaxed text-center md:text-left">
-              {lang === 'es' 
-                ? 'No vendemos un recetario en PDF automatizado. Te capacitamos de forma personal con un sistema diario de control.' 
-                : 'We avoid generic static PDF plans or automatic advice. We build real metrics discipline.'}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            
-            {/* Pillar 1 */}
-            <div className="p-6 bg-[#141414] border border-neutral-800 rounded-lg space-y-4 hover:border-neutral-700 hover:bg-[#1a1a1a]/50 transition-all group duration-300">
-              <div className="flex justify-between items-center border-b border-neutral-900 pb-3">
-                <span className="text-xs font-mono text-brand font-bold">01 // {lang === 'es' ? 'SOBRECARGA DIARIA REGISTRADA' : 'MEASURED DAILY PROGRESSION'}</span>
-                <Dumbbell className="w-5 h-5 text-neutral-400 group-hover:text-brand transition-colors" />
-              </div>
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white">
-                {lang === 'es' ? 'Entrenamiento Basado en Cargas' : 'Precision Gym Loading'}
-              </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed font-sans">
-                {lang === 'es' 
-                  ? 'Tu rutina de series y repeticiones se calcula para tu gimnasio y tiempo de forma matemática. El registro diario de tus cargas (usando nuestra app de seguimiento recomendada) es obligatorio. Si entrenas de cabeza o de memoria, es imposible saber si progresas.'
-                  : 'Your training volumes are calculated to match your actual equipment variables. Daily logging of your sets and reps inside our recommended tracking tools is mandatory. Gaining muscle relies on tracking load variables, not winging it.'}
-              </p>
-            </div>
-
-            {/* Pillar 2 */}
-            <div className="p-6 bg-[#141414] border border-neutral-800 rounded-lg space-y-4 hover:border-neutral-700 hover:bg-[#1a1a1a]/50 transition-all group duration-300">
-              <div className="flex justify-between items-center border-b border-neutral-900 pb-3">
-                <span className="text-xs font-mono text-brand font-bold">02 // {lang === 'es' ? 'INGENIERÍA DIETÉTICA Y COMODIDAD' : 'DIETARY FLEXIBLE PARAMETERS'}</span>
-                <Utensils className="w-5 h-5 text-neutral-400 group-hover:text-amber-500 transition-colors" />
-              </div>
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white">
-                {lang === 'es' ? 'Nutrición por Macros Flexibles' : 'Macro allocations over generic plans'}
-              </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed font-sans">
-                {lang === 'es' 
-                  ? 'No hay listas estúpidas de "pollo rancio y brócoli". Te adiestramos en pesar comida, cuadrar tus platos favoritos respetando tu presupuesto y mantener la sostenibilidad social sin restricciones irracionales.'
-                  : 'Forget crash diets or boiled poultry. We instruct you on how raw foods are weighed, portioned, and logged to match your weekly targets. Maintain corporate dining and travel with zero progress compromise.'}
-              </p>
-            </div>
-
-            {/* Pillar 3 */}
-            <div className="p-6 bg-[#141414] border border-neutral-800 rounded-lg space-y-4 hover:border-neutral-700 hover:bg-[#1a1a1a]/50 transition-all group duration-300">
-              <div className="flex justify-between items-center border-b border-neutral-900 pb-3">
-                <span className="text-xs font-mono text-brand font-bold">03 // {lang === 'es' ? 'BIOMÉTRICOS Y PROMEDIOS EN EXCEL' : 'Excel morning weight averages'}</span>
-                <Workflow className="w-5 h-5 text-neutral-400 group-hover:text-teal-400 transition-colors" />
-              </div>
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white">
-                {lang === 'es' ? 'Check-In Sheets Rigurosos' : 'Rigorous Progress Sheet'}
-              </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed font-sans">
-                {lang === 'es' 
-                  ? 'Registramos tu peso en ayunas en nuestra hoja de Excel dedicada. Esta plantilla calcula promedios semanales mitigando los efectos de la retención de líquidos para tomar decisiones con bases matemáticas.'
-                  : 'We record raw morning weight parameters on our analytical spreadsheet. By calculating seven-day rolling averages, we screen out sodium retention spikes to make biomechanical adjustments objectively.'}
-              </p>
-            </div>
-
-            {/* Pillar 4 */}
-            <div className="p-6 bg-[#141414] border border-neutral-800 rounded-lg space-y-4 hover:border-neutral-700 hover:bg-[#1a1a1a]/50 transition-all group duration-300">
-              <div className="flex justify-between items-center border-b border-neutral-900 pb-3">
-                <span className="text-xs font-mono text-brand font-bold">04 // {lang === 'es' ? 'COMUNICACIÓN WHATSAPP Y VIDEOLLAMADA' : 'WHATSAPP SUPPORT + 15MIN CALLS'}</span>
-                <MessageSquare className="w-5 h-5 text-neutral-400 group-hover:text-brand transition-colors" />
-              </div>
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white">
-                {lang === 'es' ? 'Soporte Directo Semanal' : 'Direct 1-on-1 Communication'}
-              </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed font-sans">
-                {lang === 'es' 
-                  ? 'Tienes contacto de soporte directo conmigo vía WhatsApp para resolver dudas y pulir técnica con videos en el gimnasio. Cada semana, cerramos filas con una llamada de enfoque de 15 minutos de videollamada.'
-                  : 'Enjoy direct access to Juanjo on WhatsApp to clarify nutritional queries and analyze lift postures. Every single week, we hold a fast-paced 15-minute video call to lock down adjustments and goals.'}
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ROADMAP / 12-WEEK TIMELINE VISUAL */}
-      <section id="roadmap" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative">
-        <div className="max-w-7xl mx-auto">
-          
-          <div className="text-center md:text-left mb-12 space-y-3">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <span className="h-[1px] w-6 bg-brand" />
-              <span className="text-xs font-mono tracking-widest text-[#e63232] uppercase font-bold">
-                {lang === 'es' ? 'EL CRONOGRAMA INTERACTIVO' : 'THE BIOMETRIC TIMELINE'}
-              </span>
-            </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none text-center md:text-left">
-              {lang === 'es' ? 'FASES DE EVALUACIÓN Y ACCIÓN' : 'YOUR 12-WEEK TRANSFORMATION ANATOMY'}
-            </h2>
-            <p className="text-xs text-neutral-400 max-w-lg leading-relaxed mx-auto md:mx-0 text-center md:text-left font-sans">
-              {lang === 'es' 
-                ? 'Conoce exactamente lo que ocurre con tu metabolismo mes a mes. Haz clic en las pestañas para auditar cada fase.' 
-                : 'Understand how your metabolic curves are programmed over three specific cycles. Toggle tabs to review directions.'}
-            </p>
-          </div>
-
-          <RoadmapTimeline lang={lang} />
-
-        </div>
-      </section>
-
-      {/* TESTIMONIALS / CLIENT CASES */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0c0c] border-t border-b border-neutral-900/80 relative">
-        <div className="max-w-7xl mx-auto">
-          
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
-            <div className="text-left space-y-3 max-w-xl">
-              <div className="flex items-center gap-2">
-                <span className="h-[1px] w-6 bg-brand" />
-                <span className="text-xs font-mono tracking-widest text-brand uppercase font-bold">
-                  {lang === 'es' ? 'CASOS DE ÉXITO' : 'PROOF HISTORIES'}
-                </span>
-              </div>
-              <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none">
-                {lang === 'es' ? 'RESULTADOS DE NUESTROS ASESORADOS' : 'REAL OUTCOMES FROM HIGH-PERFORMANCE CLIENTS'}
-              </h2>
-              <p className="text-sm text-neutral-400 leading-relaxed font-sans">
-                {lang === 'es' 
-                  ? 'Métricas tangibles reales logradas por personas de alta exigencia aplicando nuestra estructuración de datos.' 
-                  : 'Tangible physical gains documented by busy corporate leaders who implemented our data systems.'}
-              </p>
-            </div>
-          </div>
-
-          {/* Bento grid representation of case studies */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-left">
-            {clientCases.map((client) => (
-              <div 
-                key={client.id}
-                className="bg-[#141414] border border-neutral-800 rounded-xl overflow-hidden hover:border-neutral-700/80 transition-all duration-300 flex flex-col justify-between"
-              >
-                
-                {/* Visual Image / Top panel with Unsplash */}
-                <div className="relative">
-                  <img 
-                    src={client.image} 
-                    alt={client.name} 
-                    className="w-full aspect-[4/3] object-cover filter grayscale contrast-110"
-                  />
-                  {/* Dynamic absolute badges */}
-                  <div className="absolute top-4 left-4 bg-brand text-white font-mono font-bold text-[9px] tracking-widest uppercase px-2.5 py-1 rounded">
-                    {client.pillarFocus}
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-neutral-950/90 text-white font-display font-bold text-xs tracking-wider uppercase px-3 py-1 rounded-sm border border-neutral-850/80">
-                    {client.duration}
-                  </div>
-                </div>
-
-                {/* Narrative content of metrics and quotes */}
-                <div className="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-display font-black text-xl text-white uppercase leading-tight">{client.name}</h4>
-                        <span className="text-[10px] text-neutral-500 font-mono block mt-0.5">{client.role}, {client.age} {lang === 'es' ? 'años' : 'years old'}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-[#0e0e0e]/90 border-l border-brand p-3 rounded text-neutral-300 text-xs italic font-sans leading-relaxed">
-                      "{client.quote}"
-                    </div>
-                  </div>
-
-                  {/* Quantitative results banner */}
-                  <div className="pt-4 border-t border-neutral-900 grid grid-cols-2 gap-2 text-center font-mono">
-                    <div className="p-2 bg-[#0d0d0d] border border-neutral-850 rounded">
-                      <span className="block text-[9px] text-neutral-500 tracking-wider uppercase">
-                        {lang === 'es' ? 'GRASA REDUCIDA' : 'VISUAL FAT LOSS'}
-                      </span>
-                      <span className="text-sm font-display text-brand font-bold uppercase">{client.metricDelta}</span>
-                    </div>
-                    <div className="p-2 bg-[#0d0d0d] border border-neutral-850 rounded">
-                      <span className="block text-[9px] text-neutral-500 tracking-wider uppercase">
-                        {lang === 'es' ? 'RENDIMIENTO FÍSICO' : 'gym overload'}
-                      </span>
-                      <span className="text-sm font-display text-white font-bold uppercase">{client.secondaryMetric}</span>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            ))}
           </div>
 
         </div>
@@ -824,8 +724,8 @@ export default function App() {
             </a>
             <p className="text-xs leading-relaxed max-w-sm font-sans">
               {lang === 'es'
-                ? 'Ingeniería física y estructural para profesionales con responsabilidades. Construido íntegramente sobre análisis metabólicos y datos termodinámicos.'
-                : 'Physique structural engineering for high-demand individuals. Derived entirely from raw thermodynamic tracking and physical metrics.'}
+                ? 'Coaching premium 1-on-1 enfocado en hábitos sólidos, disciplina y nutrición sostenible para personas decididas a cambiar su físico de forma inteligente.'
+                : 'Premium 1-on-1 coaching focusing on strong habits, unshakeable discipline, and sustainable nutrition for individuals ready to transform their physique intelligently.'}
             </p>
           </div>
 

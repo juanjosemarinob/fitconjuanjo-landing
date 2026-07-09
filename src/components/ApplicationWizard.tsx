@@ -59,12 +59,12 @@ export default function ApplicationWizard({ lang }: LanguageProps) {
                   02
                 </div>
                 <h3 className="font-display font-bold text-white text-base uppercase mb-1">
-                  {lang === 'es' ? 'DIAGNÓSTICO & FILTRO' : 'DIAGNOSIS & FILTER'}
+                  {lang === 'es' ? 'DIAGNÓSTICO PERSONAL' : 'PERSONAL SCREENING'}
                 </h3>
                 <p className="text-xs text-neutral-400 leading-relaxed font-sans">
                   {lang === 'es' 
-                    ? 'Juanjo analizará personalmente tus parámetros y te contactará directamente por WhatsApp para comprobar la viabilidad de tus resultados y presentarte el plan.' 
-                    : 'Juanjo will personally analyze your parameters and contact you directly via WhatsApp to verify the feasibility of your results and present the plan to you.'}
+                    ? 'Juanjo analizará personalmente tus parámetros de entrenamiento y gasto calórico para comprobar viabilidad de resultados.' 
+                    : 'Juanjo personally reviews your lifestyle variables and current performance level to evaluate objective safety and viability.'}
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function ApplicationWizard({ lang }: LanguageProps) {
                 </h3>
                 <p className="text-xs text-neutral-400 leading-relaxed font-sans">
                   {lang === 'es' 
-                    ? 'Una vez confirmada tu inscripción, configuramos tu plataforma de entrenamiento y tu plan de alimentación 100% personalizado a ti y a tus objetivos para empezar a trabajar de inmediato.' 
+                    ? 'Si hay compatibilidad, agendaremos una videollamada para configurar tu hoja de macros al gramo y calendario.' 
                     : 'If there is direct compatibility, we set a video onboarding call to detail your exact macro sheet and weekly targets.'}
                 </p>
               </div>

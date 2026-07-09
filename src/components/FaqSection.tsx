@@ -23,7 +23,7 @@ export default function FaqSection({ lang }: LanguageProps) {
       },
       {
         q: '¿Qué pasa si una semana no lleno mis datos de peso y macros?',
-        a: 'Tu inversión vale únicamente si ejecutas el plan de control. Al aplicar la regla "No Data, No Call", protegemos la integridad del proceso. Juanjo no toma decisiones a ciegas ni basadas en "cómo te sientes con el espejo". Si no hay números de peso promedio semanal y registros de cargas para analizar, suspendemos la llamada para forzar la honestidad con tus propios datos.'
+        a: 'Tu inversión funciona si trabajamos con constancia y hábitos firmes. No buscamos perfección obsesiva ni agobiarte, sino un cambio sostenible. Si tienes una semana difícil o viajas, adaptamos el plan para que no pierdas el ritmo. La transparencia y el disfrute del camino son la base para construir una verdadera disciplina que dure para siempre.'
       },
       {
         q: '¿Necesito equipo especial o ir a un gimnasio específico?',
@@ -45,7 +45,7 @@ export default function FaqSection({ lang }: LanguageProps) {
       },
       {
         q: 'What happens if I forget to log my weight and macros?',
-        a: 'Your investment only yields results if you execute the tracking framework. By applying our "No Data, No Call" rule, we protect the process integrity. Juanjo does not make adjustments blindly or based on subjective mirror feelings. If there are no weekly average weight figures and workout logs to analyze, we pause the call to enforce maximum clarity and accountability.'
+        a: 'Your investment only yields results if you commit to the journey with consistency. If you have a challenging week or travel, we adapt the guidelines so you never lose momentum. The key is transparency and sustainable habits; we do not demand obsessive perfection, but a process you can actually enjoy while forging discipline.'
       },
       {
         q: 'Do I need special equipment or a specific gym?',
