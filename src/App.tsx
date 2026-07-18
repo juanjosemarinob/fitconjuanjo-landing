@@ -195,25 +195,23 @@ export default function App() {
             <div className="inline-flex items-center gap-2.5 bg-neutral-900/50 border border-neutral-800 rounded-full px-3.5 py-1 text-xs text-neutral-400">
               <span className="flex h-1.5 w-1.5 rounded-full bg-brand" />
               <span className="font-mono tracking-widest uppercase text-[10px]">
-                {lang === 'es' ? 'COACHING 1-ON-1 PERSONALIZADO Y DE ALTO COMPROMISO' : 'HIGH-COMMITMENT CUSTOM 1-ON-1 COACHING'}
+                {lang === 'es' ? 'COACHING 1-ON-1 · HÁBITOS QUE CAMBIAN TU VIDA' : '1-ON-1 COACHING · HABITS THAT CHANGE YOUR LIFE'}
               </span>
             </div>
 
             <h1 className="font-display font-extrabold text-[54px] sm:text-[72px] lg:text-[88px] leading-[0.92] uppercase italic text-white tracking-tighter">
               {lang === 'es' ? (
                 <>
-                  DEJA DE <br />
-                  ADIVINAR. <br />
+                  ENTRENAS DURO. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    INVIERTE.
+                    ¿VIVES MEJOR?
                   </span>
                 </>
               ) : (
                 <>
-                  STOP <br />
-                  GUESSING. <br />
+                  YOU TRAIN HARD. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    INVEST.
+                    DO YOU LIVE BETTER?
                   </span>
                 </>
               )}
@@ -222,11 +220,11 @@ export default function App() {
             <p className="text-md sm:text-lg text-neutral-300 max-w-xl font-normal leading-relaxed">
               {lang === 'es' ? (
                 <>
-                  Construye un físico fuerte y saludable a través de un <strong className="text-white font-semibold">sistema diseñado a tu medida</strong>. Sin planes extremos ni sacrificios absurdos; solo disciplina inteligente, hábitos sólidos y un método sostenible que disfrutas de principio a fin.
+                  No se trata solo de verte mejor — se trata de construir una <strong className="text-white font-semibold">estructura de vida</strong> que te haga más fuerte, más enfocado y más saludable a largo plazo. El cambio físico llega como consecuencia, no como meta única.
                 </>
               ) : (
                 <>
-                  Build a strong, healthy body through a <strong className="text-white font-semibold">fully custom lifestyle system</strong>. No crash dieting or unrealistic metrics—just smart discipline, solid habits, and a sustainable roadmap you truly enjoy.
+                  This isn't just about looking better — it's about building a <strong className="text-white font-semibold">life structure</strong> that makes you stronger, more focused, and healthier for the long run. Physical change follows as a consequence, not the only goal.
                 </>
               )}
             </p>
@@ -254,8 +252,8 @@ export default function App() {
               <ShieldCheck className="w-4 h-4 text-brand" />
               <span>
                 {lang === 'es' 
-                  ? 'SOPORTE 1-ON-1 DIRECTO SIN INTERMEDIARIOS. METODOLOGÍA REGULADA POR METRICAS.' 
-                  : 'DIRECT 1-ON-1 SINCERE COACHING. TRACKING CONTROLLED BY STRICT DATA.'}
+                  ? 'SOPORTE 1-ON-1 DIRECTO SIN INTERMEDIARIOS. UN SISTEMA QUE RESPETA TU PROCESO.' 
+                  : 'DIRECT 1-ON-1 SUPPORT, NO MIDDLEMEN. A SYSTEM THAT RESPECTS YOUR PROCESS.'}
               </span>
             </div>
 
@@ -282,15 +280,15 @@ export default function App() {
               {/* background red pill glow */}
               <div className="absolute top-0 right-0 w-2 h-full bg-brand" />
               <div className="text-xs text-brand font-mono tracking-widest uppercase mb-1 font-bold">
-                {lang === 'es' ? 'CONSTRUYE DISCIPLINA REAL' : 'BUILD REAL DISCIPLINE'}
+                {lang === 'es' ? 'CONSTRUYE SALUD REAL' : 'BUILD REAL HEALTH'}
               </div>
               <div className="font-display font-black text-2xl text-neutral-100 uppercase tracking-tight">
                 {lang === 'es' ? 'HÁBITOS > INTENSIDAD' : 'HABITS > INTENSITY'}
               </div>
               <p className="text-xs text-neutral-400 mt-1.5 leading-normal font-sans">
                 {lang === 'es' 
-                  ? 'El éxito no viene de matarte una semana. Viene de crear hábitos diarios, comer saludable y disfrutar el camino de forma sostenible.'
-                  : 'Success is not about extreme short-term efforts. It is about locking down daily habits, eating healthy, and enjoying a sustainable path.'}
+                  ? 'El éxito no viene de matarte una semana. Viene de construir hábitos diarios que sostengas por años, no solo por 12 semanas.'
+                  : 'Success doesn\'t come from killing yourself for one week. It comes from building daily habits you sustain for years, not just 12 weeks.'}
               </p>
             </div>
 
@@ -315,19 +313,19 @@ export default function App() {
               {lang === 'es' ? (
                 <>
                   ¿PARA QUIÉN ES <br />
-                  <span className="text-neutral-500 font-normal">ESTA INVERSIÓN FÍSICA?</span>
+                  <span className="text-neutral-500 font-normal">ESTA INVERSIÓN EN TI?</span>
                 </>
               ) : (
                 <>
                   WHO IS THIS <br />
-                  <span className="text-neutral-500 font-normal">PHYSICAL INVESTMENT FOR?</span>
+                  <span className="text-neutral-500 font-normal">INVESTMENT IN YOURSELF FOR?</span>
                 </>
               )}
             </h2>
             <p className="text-sm sm:text-base text-neutral-400 max-w-2xl font-sans text-center md:text-left leading-relaxed">
               {lang === 'es' 
-                ? 'No diseñamos planes para todo el mundo. Este espacio es para personas altamente comprometidas, dispuestas a invertir recursos, tiempo y enfoque en reprogramar su cuerpo bajo un sistema realista, sustentable y sin adivinanzas.'
-                : 'We do not build templates for the masses. This program is a mutual commitment designed for individuals ready to allocate capital, time, and focus to reconstruct their health parameters through a realistic, worry-free system.'}
+                ? 'No diseñamos planes para todo el mundo. Este espacio es para personas decididas a invertir tiempo y recursos en cambiar su vida de raíz — no solo su físico — bajo un sistema realista, sostenible y sin adivinanzas.'
+                : 'We do not build templates for the masses. This space is for people decided to invest time and resources in changing their life at the root — not just their physique — through a realistic, sustainable, worry-free system.'}
             </p>
           </div>
 
@@ -345,12 +343,12 @@ export default function App() {
                     {lang === 'es' ? 'AVATAR 01 · GIMNASIO CONSTANTE' : 'AVATAR 01 · CONSISTENT TRAINER'}
                   </span>
                   <h3 className="font-display font-black text-2xl text-white uppercase tracking-tight">
-                    {lang === 'es' ? 'Entrenas duro, pero te falta la fórmula exacta' : 'You lift heavy, but lack the precise formula'}
+                    {lang === 'es' ? 'Entrenas duro, pero te falta estructura de vida' : 'You train hard, but lack life structure'}
                   </h3>
                   <p className="text-sm text-neutral-300 font-sans font-light leading-relaxed">
                     {lang === 'es'
-                      ? 'Vas al gimnasio varias veces por semana, comes sano a ojo, compras suplementos recomendados... pero al mirarte al espejo ves poco o ningún avance real. Te falta cuadrar la nutrición con rigor matemático y programar tus cargas de forma inteligente para forzar la adaptación de tus fibras.'
-                      : 'You hit the weights weekly, eyeball your active diet, and take the usual supplements—yet you feel visually unchanged. What you lack is not will; it is exact macronutrient calibration and a programmatic loading sequence to force real fiber growth.'}
+                      ? 'Vas al gimnasio varias veces por semana, comes sano a ojo, compras suplementos recomendados... pero al mirarte al espejo ves poco avance real. Te falta un sistema que ordene tu nutrición, tu entrenamiento y tus hábitos diarios — no más esfuerzo, sino más estructura.'
+                      : 'You hit the gym several times a week, eyeball your diet, take the usual supplements—yet you see little real progress. What you lack isn\'t effort; it\'s a system that organizes your nutrition, training, and daily habits.'}
                   </p>
                 </div>
               </div>
@@ -378,8 +376,8 @@ export default function App() {
                   </h3>
                   <p className="text-sm text-neutral-300 font-sans font-light leading-relaxed">
                     {lang === 'es'
-                      ? 'Reconoces que necesitas priorizar tu salud física, mental y estética, pero huyes de los gurús extremos que te exigen comer arroz y pollo hervido. Quieres crear hábitos consistentes, entender tu propio metabolismo y lograr disciplina desde cero mediante un sistema disfrutable y guiado de cerca.'
-                      : 'You understand that your health demands priority, but you deny standard fit-influencer plans demanding raw restrictions and zero taste. You want to construct deep long-term discipline from absolute scratch with a supportive, highly realistic method.'}
+                      ? 'Reconoces que necesitas priorizar tu salud física y mental, pero huyes de los gurús extremos que te exigen comer arroz y pollo hervido. Quieres construir hábitos que te acompañen toda la vida — no una dieta de 3 meses — con un sistema disfrutable y guiado de cerca.'
+                      : 'You know your health needs to be a priority, but you avoid extreme gurus demanding bland restrictions. You want to build habits that last a lifetime — not a 3-month diet — with an enjoyable, closely guided system.'}
                   </p>
                 </div>
               </div>
@@ -397,8 +395,8 @@ export default function App() {
             <ShieldCheck className="w-5 h-5 text-brand shrink-0" />
             <p className="text-xs text-neutral-400 font-sans tracking-wide leading-relaxed text-center sm:text-left">
               {lang === 'es' 
-                ? 'Ambos perfiles tienen algo en común: comprenden que su cuerpo es su activo físico más importante y están decididos a invertir en una asesoría de alto nivel para dejar de perder tiempo.'
-                : 'Both vectors resolve to the same point: they acknowledge the physical body is their most valuable container, choosing to invest in elite mentorship instead of losing years to guesswork.'}
+                ? 'Ambos perfiles tienen algo en común: entienden que su salud es su activo más importante, y están decididos a invertir en construir hábitos que duren.'
+                : 'Both profiles have something in common: they understand their health is their most important asset, and they\'re decided to invest in building habits that last.'}
             </p>
           </div>
 
@@ -421,20 +419,20 @@ export default function App() {
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-none">
               {lang === 'es' ? (
                 <>
-                  EL SISTEMA DE ENFOQUE <br />
-                  <span className="text-neutral-500 font-normal">SANO, SEGURO Y SOSTENIBLE</span>
+                  EL SISTEMA DE HÁBITOS <br />
+                  <span className="text-neutral-500 font-normal">SANOS, SEGUROS Y SOSTENIBLES</span>
                 </>
               ) : (
                 <>
-                  THE 3 CORE PIECES <br />
-                  <span className="text-neutral-500 font-normal">FOR SUSTAINED MIND & BODY GROWTH</span>
+                  THE HABIT SYSTEM <br />
+                  <span className="text-neutral-500 font-normal">HEALTHY, SAFE, SUSTAINABLE</span>
                 </>
               )}
             </h2>
             <p className="text-sm sm:text-base text-neutral-400 max-w-xl mx-auto font-sans leading-relaxed">
               {lang === 'es'
-                ? 'Olvídate de la adivinanza y de las dietas restrictivas que arruinan tu vida social. Nuestro método de acompañamiento premium se compone de tres pilares diseñados para tu vida:'
-                : 'Say goodbye to extreme calorie limits and over-training splits. We deliver functional, habit-centric systems built to integrate cleanly into your real social and personal calendar:'}
+                ? 'Olvídate de la adivinanza y de las dietas restrictivas que arruinan tu vida social. Construimos un sistema de hábitos —entrenamiento, nutrición y acompañamiento— diseñado para que dure más allá del programa:'
+                : 'Say goodbye to guesswork and restrictive diets that ruin your social life. We build a habit system —training, nutrition, and support— designed to outlast the program itself:'}
             </p>
           </div>
 
@@ -584,14 +582,14 @@ export default function App() {
                 {lang === 'es' ? (
                   <>
                     SOY JUAN JOSÉ MARIÑO. <br />
-                    APLICO METODOLOGÍAS DE INGENIERO <br />
-                    <span className="text-neutral-500 font-normal">PARA MAXIMIZAR TUS PROCESOS.</span>
+                    CONVERTÍ MI DISCIPLINA <br />
+                    <span className="text-neutral-500 font-normal">EN UN SISTEMA.</span>
                   </>
                 ) : (
                   <>
                     I AM JUAN JOSÉ MARIÑO (JUANJO). <br />
-                    I APPLY ENGINEERING SYSTEM LOGIC <br />
-                    <span className="text-neutral-500 font-normal font-sans">TO STREAMLINE YOUR BODY RECOMP.</span>
+                    I TURNED MY DISCIPLINE <br />
+                    <span className="text-neutral-500 font-normal font-sans">INTO A SYSTEM.</span>
                   </>
                 )}
               </h2>
@@ -599,11 +597,11 @@ export default function App() {
               <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-sans font-light text-left">
                 {lang === 'es' ? (
                   <>
-                    He sido atleta toda mi vida: competí en fútbol, atletismo y voleibol escolar, y nadé competitivamente por 4 años. Llevo más de 8 años de entrenamiento de fuerza en el gimnasio, corriendo distancias y empujando mis límites. En 2024, tras un periodo de volumen (bulk), llegué a pesar 190 libras y logré reducirlas a 165 libras totalmente definido, manteniendo el músculo e imprimiendo disciplina real. Completé mi primer maratón completo en mayo de 2025 y obtuve mi mejor récord en media maratón de 1h45m el 12 de abril de 2026. Al igual que el <strong>Dr. Andrew Huberman</strong> y el <strong>Dr. Andy Galpin</strong>, creo en metodologías de entrenamiento y nutrición respaldadas al 100% por la ciencia biológica, sin trampas ni rodeos.
+                    He sido atleta toda mi vida: competí en fútbol, atletismo y voleibol escolar, y nadé competitivamente por 4 años. Llevo más de 8 años de entrenamiento de fuerza en el gimnasio, corriendo distancias y empujando mis límites. En 2024, tras un periodo de volumen (bulk), llegué a pesar 190 libras y logré reducirlas a 165 libras totalmente definido, manteniendo el músculo e imprimiendo disciplina real — no con una dieta de moda, sino con un sistema de datos, macros y constancia sostenida. Completé mi primer maratón completo en mayo de 2025 y obtuve mi mejor récord en media maratón de 1h45m el 12 de abril de 2026. No llegué aquí con genética privilegiada — llegué con un proceso que respeté, semana tras semana.
                   </>
                 ) : (
                   <>
-                    I have been an athlete my entire life: competing in school soccer, track and field, and volleyball, alongside 4 years of competitive swimming. I have spent over 8 years in the weight room and on the running track. In 2024, after a bulk phase peaking at 190 lbs, I carved down to 165 lbs of visual muscle fiber. I completed my first marathon in May 2025 and locked in a 1h45m Half-Marathon personal record on April 12, 2026. Modeled on pioneering human-performance science from <strong>Dr. Andrew Huberman</strong> and <strong>Dr. Andy Galpin</strong>, I treat body recomposition as a precise biological optimization challenge.
+                    I have been an athlete my entire life: competing in school soccer, track and field, and volleyball, alongside 4 years of competitive swimming. I have spent over 8 years in the weight room and on the running track. In 2024, after a bulk phase peaking at 190 lbs, I carved down to 165 lbs of visual muscle fiber — not with a fad diet, but with a system of data, macros, and sustained consistency. I completed my first marathon in May 2025 and locked in a 1h45m Half-Marathon personal record on April 12, 2026. I didn't get here with privileged genetics — I got here by respecting a process, week after week.
                   </>
                 )}
               </p>
@@ -661,6 +659,21 @@ export default function App() {
 
             </div>
 
+          </div>
+
+          {/* NEW BRAND RULE: EL PROCESO ES EL RESULTADO */}
+          <div className="mt-16 bg-[#111111]/40 border border-neutral-900 rounded-2xl p-8 sm:p-10 text-center max-w-4xl mx-auto">
+            <span className="text-xs font-mono tracking-widest text-brand uppercase font-bold">
+              {lang === 'es' ? 'NUESTRA REGLA' : 'OUR RULE'}
+            </span>
+            <h3 className="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight mt-3 mb-4">
+              {lang === 'es' ? 'El Proceso es el Resultado.' : 'The Process is the Result.'}
+            </h3>
+            <p className="text-sm sm:text-base text-neutral-400 font-sans leading-relaxed max-w-2xl mx-auto">
+              {lang === 'es'
+                ? 'No perseguimos resultados rápidos ni transformaciones de 30 días. Confiar en el proceso —entrenar con estructura, comer con intención, registrar tus datos con honestidad— ya es la victoria. El cambio físico, la fuerza y la salud a largo plazo llegan como consecuencia de sostener el proceso, no de forzarlo.'
+                : 'We don\'t chase quick fixes or 30-day transformations. Trusting the process —training with structure, eating with intention, tracking your data honestly— is already the win. Physical change, strength, and long-term health follow from sustaining the process, not forcing it.'}
+            </p>
           </div>
 
         </div>
@@ -724,15 +737,15 @@ export default function App() {
             </a>
             <p className="text-xs leading-relaxed max-w-sm font-sans">
               {lang === 'es'
-                ? 'Coaching premium 1-on-1 enfocado en hábitos sólidos, disciplina y nutrición sostenible para personas decididas a cambiar su físico de forma inteligente.'
-                : 'Premium 1-on-1 coaching focusing on strong habits, unshakeable discipline, and sustainable nutrition for individuals ready to transform their physique intelligently.'}
+                ? 'Coaching premium 1-on-1 enfocado en hábitos sólidos, salud a largo plazo y disciplina sostenible para personas decididas a cambiar su vida.'
+                : 'Premium 1-on-1 coaching focused on solid habits, long-term health, and sustainable discipline for people decided to change their life.'}
             </p>
           </div>
 
           <div className="space-y-1 text-center md:text-right">
             <p>© {new Date().getFullYear()} FITCONJUANJO. All rights reserved.</p>
             <p className="text-[11px] text-neutral-600 font-sans">
-              {lang === 'es' ? 'La excelencia biológica requiere consistencia. "No Data, No Progress".' : 'Physical changes require metric discipline. "No Data, No Progress".'}
+              {lang === 'es' ? 'El proceso es el resultado.' : 'The process is the result.'}
             </p>
             <p className="text-[10px] text-[#444] pt-2">100% Online (Global) | Instagram: @fitconjuanjo</p>
           </div>
