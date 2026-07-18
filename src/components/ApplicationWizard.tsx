@@ -27,8 +27,8 @@ export default function ApplicationWizard({ lang }: LanguageProps) {
             
             <p className="text-sm sm:text-base text-neutral-400 max-w-xl mx-auto leading-relaxed">
               {lang === 'es' 
-                ? 'Las consultorías son de alto rendimiento, contacto estrecho e individuales. Evaluamos tu compatibilidad para asegurar un progreso 100% predecible.' 
-                : 'Coaching is high-touch, hyper-personalized, and limited. We evaluate candidate alignment to guarantee predictable body recomposition.'}
+                ? 'Las consultorías son de alto compromiso, contacto estrecho e individuales. Evaluamos tu compatibilidad para asegurar que el proceso funcione para ti.' 
+                : 'Coaching is high-commitment, hyper-personalized, and limited. We evaluate candidate alignment to make sure the process actually works for you.'}
             </p>
           </div>
 
