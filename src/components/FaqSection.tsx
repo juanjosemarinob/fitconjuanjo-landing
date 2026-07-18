@@ -15,15 +15,15 @@ export default function FaqSection({ lang }: LanguageProps) {
     es: [
       {
         q: '¿Cuánto tiempo al día necesito para entrenar?',
-        a: 'Nos adaptamos a tu agenda real. La eficiencia del sistema está por encima de pasar horas muertas en el gimnasio. Si dispones de 45 minutos cuatro veces a la semana, estructuramos el volumen exacto para que rindan más que 2 horas de sobrecarga aleatoria. Este programa está diseñado específicamente para profesionales ocupados.'
+        a: 'Nos adaptamos a tu agenda real. La eficiencia del sistema está por encima de pasar horas muertas en el gimnasio. Si dispones de 45 minutos cuatro veces a la semana, estructuramos el volumen exacto para que rindan más que 2 horas de sobrecarga aleatoria. Este programa se acopla a tus tiempos.'
       },
       {
         q: '¿Tengo que dejar de comer lo que me gusta?',
-        a: 'No. Nos enfocamos en macronutrientes precisos y balance de nitrógeno. Aprenderás a pesar, registrar y rotar tus alimentos favoritos respetando tus macros semanales. No hay alimentos prohibidos; solo hay proporciones ineficientes. La meta es la autonomía física definitiva.'
+        a: 'No. Nos enfocamos en macronutrientes precisos. Aprenderás a pesar, registrar y rotar tus alimentos favoritos respetando tus macros semanales. No hay alimentos prohibidos; solo hay proporciones ineficientes. La meta es la autonomía física definitiva.'
       },
       {
         q: '¿Qué pasa si una semana no lleno mis datos de peso y macros?',
-        a: 'Tu inversión funciona si trabajamos con constancia y hábitos firmes. No buscamos perfección obsesiva ni agobiarte, sino un cambio sostenible. Si tienes una semana difícil o viajas, adaptamos el plan para que no pierdas el ritmo. La transparencia y el disfrute del camino son la base para construir una verdadera disciplina que dure para siempre.'
+        a: 'Tu proceso no se rompe por una semana imperfecta, se rompe si dejas de intentarlo. No buscamos perfección obsesiva ni agobiarte, sino un cambio sostenible. Si tienes una semana difícil o viajas, adaptamos el plan para que no pierdas el ritmo. El registro de datos nos ayuda a ajustar con precisión, pero la constancia del proceso es lo que realmente construye resultados duraderos.'
       },
       {
         q: '¿Necesito equipo especial o ir a un gimnasio específico?',
@@ -31,7 +31,7 @@ export default function FaqSection({ lang }: LanguageProps) {
       },
       {
         q: '¿Cómo sé si este programa realmente es para mí?',
-        a: 'Este sistema es para ti si eres una persona que valora la verdad científica, tiene poco tiempo y quiere enfocar su transformación física como un proceso de optimización real. No es para ti si buscas dietas "mágicas" de tres días o si no estás dispuesto a tomarte 5 minutos diarios en registrar tu peso o tus comidas.'
+        a: 'Este sistema es para ti si valoras construir una vida más fuerte y saludable a largo plazo, tienes poco tiempo, y quieres confiar en un proceso real en vez de buscar atajos. No es para ti si buscas dietas "mágicas" de tres días o resultados sin sostener el proceso semana a semana.'
       }
     ],
     en: [
@@ -45,7 +45,7 @@ export default function FaqSection({ lang }: LanguageProps) {
       },
       {
         q: 'What happens if I forget to log my weight and macros?',
-        a: 'Your investment only yields results if you commit to the journey with consistency. If you have a challenging week or travel, we adapt the guidelines so you never lose momentum. The key is transparency and sustainable habits; we do not demand obsessive perfection, but a process you can actually enjoy while forging discipline.'
+        a: 'Your process doesn\'t break over one imperfect week — it breaks if you stop trying. We don\'t demand obsessive perfection, just a sustainable change. If you have a hard week or travel, we adapt the plan so you don\'t lose momentum. Data tracking helps us adjust with precision, but the consistency of the process is what actually builds lasting results.'
       },
       {
         q: 'Do I need special equipment or a specific gym?',
@@ -53,7 +53,7 @@ export default function FaqSection({ lang }: LanguageProps) {
       },
       {
         q: 'How do I know if this coaching program is a match for me?',
-        a: 'This system is for you if you value scientific truth, are short on time, and want to treat your health as an optimization process. It is not a fit if you are looking for generic 3-day detox diets or are unwilling to dedicate 5 minutes daily to weighing foods and tracking key metrics.'
+        a: 'This system is for you if you value building a stronger, healthier life for the long run, are short on time, and want to trust a real process instead of chasing shortcuts. It is not a fit if you are looking for magic 3-day diets or results without sustaining the process week after week.'
       }
     ]
   };
