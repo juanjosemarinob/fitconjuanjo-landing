@@ -267,7 +267,7 @@ export default function App() {
                 {lang === 'es' ? 'CAMBIO PERSONAL DE CONTROL' : 'PERSONAL RECOMP PARAMETER'}
               </div>
               <div className="font-display font-black text-4xl text-neutral-100 uppercase tracking-tight">
-                190 <span className="text-neutral-500 text-2xl">-></span> 165 <span className="text-brand text-xl">LBS</span>
+                190 <span className="text-neutral-500 text-2xl">-</span> 165 <span className="text-brand text-xl">LBS</span>
               </div>
               <p className="text-xs text-neutral-400 mt-1 leading-normal font-sans">
                 {lang === 'es' 
