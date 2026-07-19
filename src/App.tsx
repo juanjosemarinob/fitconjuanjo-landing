@@ -220,11 +220,11 @@ export default function App() {
             <p className="text-md sm:text-lg text-neutral-300 max-w-xl font-normal leading-relaxed">
               {lang === 'es' ? (
                 <>
-                  Un <strong className="text-white font-semibold">sistema de entrenamiento y nutrición</strong> diseñado a tu medida para lograr el físico que llevas tiempo buscando — y, de paso, más fuerza, enfoque y salud para el resto de tu vida.
+                  Un <strong className="text-white font-semibold">sistema de entrenamiento y nutrición</strong> diseñado a tu medida para lograr el físico que llevas tiempo buscando y, de paso, más fuerza, enfoque y salud para el resto de tu vida.
                 </>
               ) : (
                 <>
-                  A <strong className="text-white font-semibold">training and nutrition system</strong> designed around you to get the physique you've been after — and, along the way, more strength, focus, and health for the rest of your life.
+                  A <strong className="text-white font-semibold">training and nutrition system</strong> designed around you to get the physique you've been after and, along the way, more strength, focus, and health for the rest of your life.
                 </>
               )}
             </p>
@@ -267,7 +267,7 @@ export default function App() {
                 {lang === 'es' ? 'CAMBIO PERSONAL DE CONTROL' : 'PERSONAL RECOMP PARAMETER'}
               </div>
               <div className="font-display font-black text-4xl text-neutral-100 uppercase tracking-tight">
-                190 <span className="text-neutral-500 text-2xl">a</span> 165 <span className="text-brand text-xl">LBS</span>
+                190 <span className="text-neutral-500 text-2xl">-></span> 165 <span className="text-brand text-xl">LBS</span>
               </div>
               <p className="text-xs text-neutral-400 mt-1 leading-normal font-sans">
                 {lang === 'es' 
@@ -347,8 +347,8 @@ export default function App() {
                   </h3>
                   <p className="text-sm text-neutral-300 font-sans font-light leading-relaxed">
                     {lang === 'es'
-                      ? 'Vas al gimnasio varias veces por semana, comes sano a ojo, compras suplementos recomendados... pero al mirarte al espejo ves poco avance real. Te falta un sistema que ordene tu nutrición, tu entrenamiento y tus hábitos diarios — no más esfuerzo, sino más estructura.'
-                      : 'You hit the gym several times a week, eyeball your diet, take the usual supplements—yet you see little real progress. What you lack isn\'t effort; it\'s a system that organizes your nutrition, training, and daily habits.'}
+                      ? 'Vas al gimnasio varias veces por semana, comes sano a ojo, compras suplementos recomendados... pero al mirarte al espejo ves poco avance real. Te falta un sistema que ordene tu nutrición, tu entrenamiento y tus hábitos diarios, no más esfuerzo, sino más estructura.'
+                      : 'You hit the gym several times a week, eyeball your diet, take the usual supplements, yet you see little real progress. What you lack isn\'t effort; it\'s a system that organizes your nutrition, training, and daily habits.'}
                   </p>
                 </div>
               </div>
