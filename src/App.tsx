@@ -202,16 +202,16 @@ export default function App() {
             <h1 className="font-display font-extrabold text-[54px] sm:text-[72px] lg:text-[88px] leading-[0.92] uppercase italic text-white tracking-tighter">
               {lang === 'es' ? (
                 <>
-                  ENTRENAS DURO. <br />
+                  EL FÍSICO QUE QUIERES. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    ¿VIVES MEJOR?
+                    LA VIDA QUE VIENE CON ÉL.
                   </span>
                 </>
               ) : (
                 <>
-                  YOU TRAIN HARD. <br />
+                  THE PHYSIQUE YOU WANT. <br />
                   <span className="text-transparent border-t border-b border-neutral-800" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>
-                    DO YOU LIVE BETTER?
+                    THE LIFE THAT COMES WITH IT.
                   </span>
                 </>
               )}
@@ -220,11 +220,11 @@ export default function App() {
             <p className="text-md sm:text-lg text-neutral-300 max-w-xl font-normal leading-relaxed">
               {lang === 'es' ? (
                 <>
-                  No se trata solo de verte mejor — se trata de construir una <strong className="text-white font-semibold">estructura de vida</strong> que te haga más fuerte, más enfocado y más saludable a largo plazo. El cambio físico llega como consecuencia, no como meta única.
+                  Un <strong className="text-white font-semibold">sistema de entrenamiento y nutrición</strong> diseñado a tu medida para lograr el físico que llevas tiempo buscando — y, de paso, más fuerza, enfoque y salud para el resto de tu vida.
                 </>
               ) : (
                 <>
-                  This isn't just about looking better — it's about building a <strong className="text-white font-semibold">life structure</strong> that makes you stronger, more focused, and healthier for the long run. Physical change follows as a consequence, not the only goal.
+                  A <strong className="text-white font-semibold">training and nutrition system</strong> designed around you to get the physique you've been after — and, along the way, more strength, focus, and health for the rest of your life.
                 </>
               )}
             </p>
