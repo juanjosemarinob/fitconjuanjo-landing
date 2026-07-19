@@ -237,7 +237,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-brand hover:bg-neutral-100 hover:text-neutral-950 text-white font-display font-extrabold text-base tracking-widest uppercase rounded-sm transition-all duration-300 shadow-xl flex items-center justify-center gap-2 cursor-pointer"
               >
-                {lang === 'es' ? 'Postular al Programa' : 'Apply for Intake'} <ChevronRight className="w-4 h-4" />
+                {lang === 'es' ? 'Aplicar al Programa' : 'Apply for Intake'} <ChevronRight className="w-4 h-4" />
               </a>
               <a 
                 href="#historia" 
